@@ -1,12 +1,12 @@
 # Lending Club Case Study
--To be able to identify risky loan applicants, such loans can be reduced thereby reducing the risk of loss.
--The aim is to identify patterns which indicate if a person is likely to default, which may be used for taking actions such as-
-	-Denying the loan
-	-Reducing the amount of loan,
-	-Lending (to risky applicants) at a higher interest rate, etc.
+To be able to identify risky loan applicants, such loans can be reduced thereby reducing the risk of loss.<br />
+The aim is to identify patterns which indicate if a person is likely to default, which may be used for taking actions such as <br /><br />
+	-Denying the loan<br />
+	-Reducing the amount of loan,<br />
+	-Lending (to risky applicants) at a higher interest rate, etc.<br />
 
 
-## Table of Contents
+## Table of Contents<br />
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
@@ -14,81 +14,71 @@
 
 <!-- You can include any other section that is pertinent to your problem -->
 
-## General Information
-### Data Handling and Cleaning:
-No missing values or incorrect data types before we proceed to the analysis stage: 
-**Column wise:**
-• All null value column has been removed.
-• Dropped the columns which has customer behavior and will not be available for new customers. There is no 
-point of analyzing those column where data will not be available for new customers
-• Dropped the columns, if all values on column is same.
-• Dropped column which has NA and 0 which will not be useful for analysis
-• Removed desc column as NLP is not part of this project.
-• Removed url column
-**Correcting Incorrect Data Types:**
-• Removed months string from terms
-• Removed % from int rates
-• Removed all special char from emp_length
-• Replace verification_status "source verified" value with verified
-**Imputing Missing Values:**
-• Replacing emp length NA or empty with 0 value
-• Replace home_ownership None value with Others
-
-### Data Handling and Cleaning
-**Row wise:**
+## General Information<br />
+### Data Handling and Cleaning:<br />
+No missing values or incorrect data types before we proceed to the analysis stage: <br /><br />
+**Column wise:**<br />
+• All null value column has been removed.<br />
+• Dropped the columns which has customer behavior and will not be available for new customers. There is no point of analyzing those column where data will not be available for new customers<br />
+• Dropped the columns, if all values on column is same.<br />
+• Dropped column which has NA and 0 which will not be useful for analysis<br />
+• Removed desc column as NLP is not part of this project.<br />
+• Removed url column<br /><br />
+**Correcting Incorrect Data Types:**<br />
+• Removed months string from terms<br />
+• Removed % from int rates<br />
+• Removed all special char from emp_length<br />
+• Replace verification_status "source verified" value with verified<br /><br />
+**Imputing Missing Values:**<br />
+• Replacing emp length NA or empty with 0 value<br />
+• Replace home_ownership None value with Others<br /><br />
+**Row wise:**<br />
 • Dropped current loan status as this is will not add value. Interested on 
-charged off and fully paid loans.
+charged off and fully paid loans.<br />
 • Checked id and member Id are unique. There is no duplicate rows because 
-id and member_id rows as same as no of rows.
+id and member_id rows as same as no of rows.<br />
 • Checked the no of rows which has missing NA or null. There are no empty 
-rows in dataset.
-**Sanity Checks:**
-• All numeric data should be positive. Confirmed all are positive integers
-Derived Column:
-• Extracted month and year from issue_d. 
-**Outliers Removal:**
-• All numeric data has been distributed well except annual_inc. So removing 
-outlier on annual_inc. Data kept till 98 percentile
-Analysis Approach – Univariate Analysis
-• Distribution of loan_amnt , funded_amnt and funded_amnt_inv looks 
-similar.
-**Continuous data observation:**
-• Most of the Loan amounts are between 5000 15000
-• Most of the funded amount are between 5000 15000
-• Most of the interest rates between 8 to 14%
-• Most of the installments are between 200 400
-• Most of the DTI are between 1218
-• Most of the Annual income is in the range of 30,000 and 60,000
-### Analysis Approach – Univariate Analysis
-**Categorical data observation:** 
-• 76% of loans are 36 months term and 24% loans are 60 months term
-• Loan applicants contribution are Grade A (30%), Grade B(26%), Grade C 
-(20%) 
-• 22% of employees are 10+ years and 20% employees are 1 year.
-• 49% of loan applicants has rented home and 43% is mortgage
-• 56% of source has been verified and 44% is not verified
-• 85% of loan is fullu paid and 15% of loan is charged off.
-• 47% of purpose is dept consolidation and 13% is for credit card
-• Given data set, 53% of loan provided on year 2011 and 30% of loan provided 
-on 2010
-• No of load applied is slightly high on Oct, Nov and Dec
+rows in dataset.<br /><br />
+**Sanity Checks:**<br />
+• All numeric data should be positive. Confirmed all are positive integers<br /><br />
+**Derived Column:**<br />
+• Extracted month and year from issue_d. <br /><br />
+**Outliers Removal:**<br />
+• All numeric data has been distributed well except annual_inc. So removing outlier on annual_inc. Data kept till 98 percentile<br /><br />
+### Analysis Approach – Univariate Analysis<br />
+• Distribution of loan_amnt , funded_amnt and funded_amnt_inv looks similar.<br /><br />
+**Continuous data observation:**<br />
+• Most of the Loan amounts are between 5000 15000<br />
+• Most of the funded amount are between 5000 15000<br />
+• Most of the interest rates between 8 to 14%<br />
+• Most of the installments are between 200 400<br />
+• Most of the DTI are between 1218<br />
+• Most of the Annual income is in the range of 30,000 and 60,000<br /><br />
+
+**Categorical data observation:** <br />
+• 76% of loans are 36 months term and 24% loans are 60 months term<br />
+• Loan applicants contribution are Grade A (30%), Grade B(26%), Grade C (20%)<br /> 
+• 22% of employees are 10+ years and 20% employees are 1 year.<br />
+• 49% of loan applicants has rented home and 43% is mortgage<br />
+• 56% of source has been verified and 44% is not verified<br />
+• 85% of loan is fullu paid and 15% of loan is charged off.<br />
+• 47% of purpose is dept consolidation and 13% is for credit card<br />
+• Given data set, 53% of loan provided on year 2011 and 30% of loan provided on 2010<br />
+• No of load applied is slightly high on Oct, Nov and Dec<br />
 
 ### Analysis Approach – Segmented univariate analysis
 **Segmented variate analysis Observation:**
-• 60 months term charged off is 25% compare with 36 months term which is 11%. Prefer term is 36 months.
-• Lower grade charge off rate is way high than higher grade.Charge off for Grade E (27%), F (33%) and G(35%) 
-, how ever Grade A (6%), B(12%), C(17%), D (22%)
-• Sub grade: sub grade is aligning with Grade behaviour. Charge off percentage is in ascending order from A1 
-to F5. Slight diffrence behaviour on G1 to G5 grade. However number of records contributed to G subgrade 
-is way lower than other grades. we can ignore subgrade G*.
-• Not much variant in charge_off percentage based on Emp_length
-• Not much variant in charge_off percentage based on home_ownership
-• verification status verified is just 3% higher than non_verified no major variance
-• purpose High charge off percentage. small_business (28%). renewable_energy (19%) educational (17%)
-• addr_state NE state has high charge off rate 60%. However only 5 records contributed. So Ignoring.
-• pub_rec_bankruptcies 2 , charge off is 40% which is high . pub_rec_bankruptcies 1 is 22% 
-pub_rec_bankruptcies 0 is 14%
-• No of loans applied on sep, Oct, nov, dev month is high compare to other months. 
+• 60 months term charged off is 25% compare with 36 months term which is 11%. Prefer term is 36 months.<br />
+• Lower grade charge off rate is way high than higher grade.Charge off for Grade E (27%), F (33%) and G(35%) , how ever Grade A (6%), B(12%), C(17%), D (22%)<br />
+• Sub grade: sub grade is aligning with Grade behaviour. Charge off percentage is in ascending order from A1 to F5. Slight diffrence behaviour on G1 to G5 grade.However number of records contributed to G subgrade is way lower than other grades. we can ignore subgrade G*.<br />
+• Not much variant in charge_off percentage based on Emp_length<br />
+• Not much variant in charge_off percentage based on home_ownership<br />
+• verification status verified is just 3% higher than non_verified no major variance<br />
+• purpose High charge off percentage. small_business (28%). renewable_energy (19%) educational (17%)<br />
+• addr_state NE state has high charge off rate 60%. However only 5 records contributed. So Ignoring.<br />
+• pub_rec_bankruptcies 2 , charge off is 40% which is high . pub_rec_bankruptcies 1 is 22% <br />
+• pub_rec_bankruptcies 0 is 14%<br />
+• No of loans applied on sep, Oct, nov, dev month is high compare to other months. <br /><br />
 
 ### Analysis Approach – Bivariate Analysis:
 **Bivariate Analysis Observation**
