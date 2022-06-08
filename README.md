@@ -125,6 +125,6 @@ seaborn<br />
 
 
 ## Contact
-Created by [@shangardevi]
+Created by @shangardevi
 
 
