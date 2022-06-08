@@ -109,9 +109,30 @@ than 30%. this has been achived via loop.<br />
 • funded_amnt_slab (30000.0, 35000.0] , november and december, charge off is more than 35% <br />
 • int_rate_slab is 20.0, 24.0, from 7th month to 12th month, charge off is more than 35% <br />
 • funded_amnt_slab (30000.0, 35000.0], dti_slab (25.0, 30.0], (15.0, 20.0] (20.0, 25.0] , charge off is more than 30%<br />
-• int_rate_slab (20.0, 24.0], all dti slab, charge off rate is more than 40%<br />
+• int_rate_slab (20.0, 24.0], all dti slab, charge off rate is more than 40%<br /><br />
 
-
+## Business Insights<br />
+• Most of the Loan amounts are between 5000 15000<br />
+• Most of the interest rates between 8 to 14%<br />
+• Most of the Annual income is in the range of 30,000 and 60,000<br />
+• 76% of loans are 36 months term and 24% loans are 60 months term<br />
+• 85% of loan is fully paid and 15% of loan is charged off.<br />
+• 60 months term charged off is 25% compare with 36 months term which is 11%. Prefer term is 36 months.<br />
+• Lower grade charged off rate is way high than higher grade.<br />
+• High charged off percentage purpose are small_business (28%). renewable_energy (19%)<br />
+• No of loans applied on Sep, Oct, Nov, Dec month is high compare to other months.<br />
+• Grade D and E charged off percentage is high for all months along with Grade F & G.<br />
+• int_rate slab (20.0, 24.0), home_ownership = OWN, RENT, charged off is very high 50%, 40%<br />
+• Small business has more than 30% of charged off for most of the income slab.<br />
+• Lower income slab, Medical purpose has 30% of charged off.<br />
+• 5 to 10% interest rates, charged off percentage is low across all income slabs.<br />
+• When income increases charged off decreases for 5 to 10% interest rates.<br />
+• 10k to 15kof funded amount , bankrupcy = 2.0, charged off percentage is 90+ 08/06/22 educational (17%)<br />
+• High interest slab charged off rate is high. lending club are on track to identify person is likely to default and provided higher interest rates.<br />
+• purpose medical, funded_amt = 30k to 35k, charged off rate is >65%<br />
+• purpose medical, funded_amt = 25k to 30k, charged off rate is >45%<br />
+• purpose wedding , charged off rate is more than 30% for 30k to 35k fund amount.<br />
+• purpose vacation, charged off rate is more than 30% for 15k to 20k fund amount<br />
 
 ## Technologies Used
 jupyter notebook<br />
