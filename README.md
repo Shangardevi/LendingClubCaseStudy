@@ -45,6 +45,8 @@ rows in dataset.<br /><br />
 • Extracted month and year from issue_d. <br /><br />
 **Outliers Removal:**<br />
 • All numeric data has been distributed well except annual_inc. So removing outlier on annual_inc. Data kept till 98 percentile<br /><br />
+
+## Conclusions
 ### Analysis Approach – Univariate Analysis<br />
 • Distribution of loan_amnt , funded_amnt and funded_amnt_inv looks similar.<br /><br />
 **Continuous data observation:**<br />
@@ -64,10 +66,10 @@ rows in dataset.<br /><br />
 • 85% of loan is fullu paid and 15% of loan is charged off.<br />
 • 47% of purpose is dept consolidation and 13% is for credit card<br />
 • Given data set, 53% of loan provided on year 2011 and 30% of loan provided on 2010<br />
-• No of load applied is slightly high on Oct, Nov and Dec<br />
+• No of load applied is slightly high on Oct, Nov and Dec<br /><br />
 
-### Analysis Approach – Segmented univariate analysis
-**Segmented variate analysis Observation:**
+### Analysis Approach – Segmented univariate analysis<br />
+**Segmented variate analysis Observation:**<br />
 • 60 months term charged off is 25% compare with 36 months term which is 11%. Prefer term is 36 months.<br />
 • Lower grade charge off rate is way high than higher grade.Charge off for Grade E (27%), F (33%) and G(35%) , how ever Grade A (6%), B(12%), C(17%), D (22%)<br />
 • Sub grade: sub grade is aligning with Grade behaviour. Charge off percentage is in ascending order from A1 to F5. Slight diffrence behaviour on G1 to G5 grade.However number of records contributed to G subgrade is way lower than other grades. we can ignore subgrade G*.<br />
@@ -80,72 +82,49 @@ rows in dataset.<br /><br />
 • pub_rec_bankruptcies 0 is 14%<br />
 • No of loans applied on sep, Oct, nov, dev month is high compare to other months. <br /><br />
 
-### Analysis Approach – Bivariate Analysis:
-**Bivariate Analysis Observation**
-**Prerequisite:**
+### Analysis Approach – Bivariate Analysis:<br />
+**Bivariate Analysis Observation**<br />
+**Prerequisite:**<br />
 Converted numical variable in to categorical dti, funded_amt, Interested_rate and income. Analyzed 
 all possible combination of 
 'emp_length','grade','home_ownership','pub_rec_bankruptcies','term','purpose','verification_status
 ','month','dti_slab','funded_amnt_slab','int_rate_slab','income_slab' where chargedoff rate is more 
-than 30%. this has been achived via loop.
-**Observations:** 
-• funded_amnt_slab (30000.0, 35000.0], emp_len = 6 years and charged off is 35%
-• [20.0, 24.0] interest slab has highest charged off rate
-• lower grade has high charged off percentage
-• Grade D and E charged off percentage is high for all months along with Grade F & G.
-• pub_rec_bankruptcies = 1 and home_ownership is OTHER and charge off percentage is 67%
-• int_rate slab (20.0, 24.0), home_ownership = OWN, RENT, charge off is very high 50%, 40%
-• funded_amnt_slab (5000.0, 10000.0], pub_rec_bankruptcies = 2.0, charge off is 50%
-• funded_amnt_slab 30000.0, 35000.0 pub_rec_bankruptcies = 2.0, charge off is 67%
-### Analysis Approach – Bivariate Analysis:
-**Bivariate Analysis Observation**
-• dti_slab 10.0, 15.0 and purpose = renewable_energy, charge off percentage is 35. 
-• dti_slab 25.0, 30.0 and purpose = renewable_energy, charge off percentage is 50. 
-• Purpose = small_business and funded_amnt_slab is [10000.0, 15000.0], [15000.0, 20000.0] [20000.0, 
-25000.0] charged off is 30+ %
-• purpose = vacation, funded_amnt_slab = [15000.0, 20000.0], charged off = 42%
-• purpose = medical, 
-• funded_amnt_slab =(15000.0, 20000.0], charged_off = 50%, funded_amnt_slab = (30000.0, 35000.0] 
-charged_off = 67%
-• purpose = small_business funded_amnt_slab = (30000.0, 35000.0] , charged_off = 46%, 
-• int_rate_slab (15.0, 20.0] and (20.0, 24.0], purpose = small_business , educational , house , medical, 
-moving , charge off percentage is more than 35% 
-• funded_amnt_slab (30000.0, 35000.0] , november and december, charge off is more than 35% 
-• int_rate_slab is 20.0, 24.0, from 7th month to 12th month, charge off is more than 35% 
-• funded_amnt_slab (30000.0, 35000.0], dti_slab (25.0, 30.0], (15.0, 20.0] (20.0, 25.0] , 
-charge off is more than 30%
-• int_rate_slab (20.0, 24.0], all dti slab, charge off rate is more than 40%
+than 30%. this has been achived via loop.<br />
+**Observations:** <br />
+• funded_amnt_slab (30000.0, 35000.0], emp_len = 6 years and charged off is 35%<br />
+• [20.0, 24.0] interest slab has highest charged off rate<br />
+• lower grade has high charged off percentage<br />
+• Grade D and E charged off percentage is high for all months along with Grade F & G.<br />
+• pub_rec_bankruptcies = 1 and home_ownership is OTHER and charge off percentage is 67%<br />
+• int_rate slab (20.0, 24.0), home_ownership = OWN, RENT, charge off is very high 50%, 40%<br />
+• funded_amnt_slab (5000.0, 10000.0], pub_rec_bankruptcies = 2.0, charge off is 50%<br />
+• funded_amnt_slab 30000.0, 35000.0 pub_rec_bankruptcies = 2.0, charge off is 67%<br />
+• dti_slab 10.0, 15.0 and purpose = renewable_energy, charge off percentage is 35. <br />
+• dti_slab 25.0, 30.0 and purpose = renewable_energy, charge off percentage is 50. <br />
+• Purpose = small_business and funded_amnt_slab is [10000.0, 15000.0], [15000.0, 20000.0] [20000.0, 25000.0] charged off is 30+ %<br />
+• purpose = vacation, funded_amnt_slab = [15000.0, 20000.0], charged off = 42%<br />
+• purpose = medical, funded_amnt_slab =(15000.0, 20000.0], charged_off = 50%, funded_amnt_slab = (30000.0, 35000.0] charged_off = 67%<br />
+• purpose = small_business funded_amnt_slab = (30000.0, 35000.0] , charged_off = 46%, <br />
+• int_rate_slab (15.0, 20.0] and (20.0, 24.0], purpose = small_business , educational , house , medical, moving , charge off percentage is more than 35% <br />
+• funded_amnt_slab (30000.0, 35000.0] , november and december, charge off is more than 35% <br />
+• int_rate_slab is 20.0, 24.0, from 7th month to 12th month, charge off is more than 35% <br />
+• funded_amnt_slab (30000.0, 35000.0], dti_slab (25.0, 30.0], (15.0, 20.0] (20.0, 25.0] , charge off is more than 30%<br />
+• int_rate_slab (20.0, 24.0], all dti slab, charge off rate is more than 40%<br />
 
-
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+jupyter notebook<br />
+python<br />
+numpy<br />
+pandas<br />
+matplotlib<br />
+seaborn<br />
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@shangardevi]
 
 
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
