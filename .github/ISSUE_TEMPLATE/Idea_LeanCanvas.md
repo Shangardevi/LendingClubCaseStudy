@@ -1,3 +1,8 @@
+---
+name: Idea request lean canvas
+about: Suggest an idea for this project
+
+---
 # Lean Canvas
 
 <table>
