@@ -1,0 +1,120 @@
+name: "💡Idea Lean Canvas"
+description: Create an idea using the Lean Canvas framework.
+title: "💡Idea Lean Canvas"
+projects: []
+labels: ["Type: Idea"]
+body:
+- type: markdown
+  attributes:
+    value: "- Welcome to the Lean Canvas. Get ready to sketch out your business ideas faster than a squirrel.\n"
+- type: textarea
+  id: Problem
+  attributes:
+    label: "Problem"
+    description: |
+      - 1. What pain points does your product/service address for your customers?
+      - 2. How do your customers currently solve these problems?
+      - 3. What are the key shortcomings of existing solutions in the market?
+    placeholder: What problems are we solving? 🤔
+  validations:
+    required: true
+- type: textarea
+  id: Solution
+  attributes:
+    label: "Solution"
+    description: |
+      - 1. What are the three most important features of your product/service that address the identified problems?
+      - 2. How do these features address the needs of your customers?
+      - 3. What benefits will customers experience from using your solution? 
+    placeholder: What are your brilliant solutions? No pressure!!!
+  validations:
+    required: true
+- type: textarea
+  id: KeyMetrics
+  attributes:
+    label: "Key Metrics"
+    description: |
+      - 1. What are the most critical metrics that indicate the success of your business?
+      - 2. How will you gauge customer satisfaction and engagement?
+      - 3. What metrics will help you track growth, performance, and overall business health?
+    placeholder: How will we measure success?
+  validations:
+    required: true
+- type: textarea
+  id: UniqueValueProposition
+  attributes:
+    label: "Unique Value Proposition"
+    description: |
+      - 1. A single, clear, compelling message that states why you are different and worth paying attention.
+      - 2. What unique benefits does your product/service offer that differentiates it from competitors?
+      - 3. Why should customers prefer your offering over others in the market?
+    placeholder: What makes us special? What's your secret sauce?
+  validations:
+    required: true
+- type: textarea
+  id: UnfairAdvantage
+  attributes:
+    label: "Unfair Advantage"
+    description: |
+      - 1. What unique resource access do you have that increases your chance of success?
+      - 2. What unique advantage do you have that cannot be easily replicated by competitors?
+      - 3. How will this advantage help you maintain a competitive edge in the market?
+    placeholder: What's your unfair advantage? Your secret weapon!!
+  validations:
+    required: true
+- type: textarea
+  id: Channels
+  attributes:
+    label: "Channels"
+    description: |
+      - 1. What channels do your customer segments prefer to be reached?
+      - 2. How are you currently reaching your customers?
+      - 3. Which channels are most effective and cost-efficient for customer acquisition and retention?
+    placeholder: How will we reach your customer?
+  validations:
+    required: true
+- type: textarea
+  id: CustomerSegments
+  attributes:
+    label: "Customer Segments"
+    description: |
+      - 1. Who are the primary users of your product/service?
+      - 2. What are the key characteristics of your target customer segments?
+      - 3. Who are your early adopters, and why will they use your product/service first?
+    placeholder: Who are your customers?
+  validations:
+    required: true
+- type: textarea
+  id: CostStructure
+  attributes:
+    label: "Cost Structure"
+    description: |
+      - 1. What are the biggest expenses associated with your business model?
+      - 2. Which resources and activities are the most expensive?
+      - 3. How can you cut costs and make more profit?
+    placeholder: What are our costs? Let's not break the bank!!
+  validations:
+    required: true
+- type: textarea
+  id: RevenueStreams
+  attributes:
+    label: "Revenue Streams"
+    description: |
+      - 1. What value are customers willing to pay for?
+      - 2. How are customers currently paying for similar offerings, and what are they willing to spend?
+      - 3. What pricing strategies will you implement?
+      - 4. How much revenue do you expect from each customer segment and revenue stream?
+    placeholder: How will you make money?
+  validations:
+    required: true
+- type: textarea
+  id: BrainstromingSpace
+  attributes:
+    label: "Brainstorming Space"
+    description: Idea playground
+    placeholder: Unleash your wacky ideas, half-baked concepts, and genius insights.
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: Remember, every great idea starts with a little madness. Don't hold back!!😄
