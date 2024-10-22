@@ -1,120 +1,135 @@
-name: "💡Idea request Lean Canvas"
-description: Create an idea using the Lean Canvas framework.
-title: "💡Idea request Lean Canvas"
+name: "🐛 Bug"
+description: Found a bug? Report it!
+title: "🐛 BUG"
 projects: []
-labels: ["Type: Idea"]
+labels: ["Type: Bug"]
 body:
 - type: markdown
   attributes:
-    value: "🤗 Welcome to the Lean Canvas. Get ready to sketch out your business ideas faster than a squirrel.\n"
+    value: "- Thank you for taking the time to report a bug! 😄 \n- Please try to spend some time to understand the bug and reproduce it.\n- Take a look at our template and try to add as much detail as possible.\n- The more details we have, easier it would be to fix it. \n- If any heading is not applicable, put `NA`\n- For additional information, write it in additional context.\n"
 - type: textarea
-  id: Problem
+  id: something_wrong
   attributes:
-    label: "Problem"
+    label: "What went wrong? Problem description🤔"
     description: |
-      1. What pain points does your product/service address for your customers?
-      2. How do your customers currently solve these problems?
-      3. What are the key shortcomings of existing solutions in the market?
-    placeholder: What problems are you solving? 🤔
+      - Please provide a detailed description of the issue you encountered. Be clear and concise in explaining what is not working as expected.
+    placeholder: Please describe the issue you experienced in detail, including any relevant information or context.
   validations:
     required: true
 - type: textarea
-  id: Solution
+  id: reproduction_steps
   attributes:
-    label: "Solution"
-    description: |
-      1. What are the three most important features of your product/service that address the identified problems?
-      2. How do these features address the needs of your customers?
-      3. What benefits will customers experience from using your solution? 
-    placeholder: What are your brilliant solutions? No pressure!!!
-  validations:
-    required: true
+    label: "Steps to Reproduce Issue"
+    description: If possible, please share the steps to reproduce the issue.
+    value: |
+      1. Go to '...'
+      2. Click on '....'
+      3. Scroll down to '....'
+      4. See the error
+    render: bash
 - type: textarea
-  id: KeyMetrics
+  id: actual_behavior
   attributes:
-    label: "Key Metrics"
-    description: |
-      1. What are the most critical metrics that indicate the success of your business?
-      2. How will you measure customer satisfaction and engagement?
-      3. What metrics will help you track growth, performance, and overall business health?
-    placeholder: How will you measure success?
-  validations:
-    required: true
+    label: "Actual Behavior"
+    description: Please describe how the system behavior when you encountered the issue.
+    placeholder: Please describe the behavior that you observed when encountering the issue.
 - type: textarea
-  id: UniqueValueProposition
+  id: expected_behavior
   attributes:
-    label: "Unique Value Proposition"
-    description: |
-      1. A single, clear, compelling message that states why you are different and worth paying attention.
-      2. What unique benefits does your product/service offer that differentiates it from competitors?
-      3. Why should customers prefer your offering over others in the market?
-    placeholder: What makes us special? What's your secret sauce?
+    label: "Expected Behavior"
+    description: Please describe how you expected the system to behave when you encountered the issue.
+    placeholder: Please describe the behavior that you expected to see when encountering the issue.
+- type: dropdown
+  id: frequency
+  attributes:
+    label: "Frequency of Occurrence"
+    description: Please select the frequency of Occurrence
+    multiple: false
+    options:
+    - Always
+    - 3/10
+    - 5/10
+    - 8/10
   validations:
-    required: true
+    required: false
 - type: textarea
-  id: UnfairAdvantage
+  id: screenshot
   attributes:
-    label: "Unfair Advantage"
-    description: |
-      1. What unique resource access do you have that increases your chance of success?
-      2. What unique advantage do you have that cannot be easily replicated by competitors?
-      3. How will this advantage help you maintain a competitive edge in the market?
-    placeholder: What's your unfair advantage? Your secret weapon!!
-  validations:
-    required: true
+    label: "Screenshots"
+    description: If applicable, add screenshots/video/gif to help explain your problem.
 - type: textarea
-  id: Channels
+  id: console
   attributes:
-    label: "Channels"
-    description: |
-      1. Which channels do your customer segments prefer to be reached?
-      2. How are you currently reaching your customers?
-      3. Which channels are most effective and cost-efficient for customer acquisition and retention?
-    placeholder: How will you reach your customer?
+    label: "Console Logs"
+    description: Please attach console logs.  
+- type: input
+  id: environment
+  attributes:
+    label: "Environment"
+    description: You can specify your operating system and version, web browser and version, or any other software that may be related to the issue.
+    placeholder: ex. Windows 10, Chrome 91.0.4472.124
   validations:
-    required: true
+    required: false
+- type: dropdown
+  id: browsers
+  attributes:
+    label: "Browsers"
+    description: What browser(s) are you seeing the problem on?
+    multiple: true
+    options:
+    - Chrome
+    - Firefox
+    - Safari
+    - Microsoft Edge
+    - Opera
+    - Brave
+    - Other
+  validations:
+    required: false
+- type: dropdown
+  id: os
+  attributes:
+    label: "OS"
+    description: Please select the operating system(s) on which you are experiencing the issue from the dropdown list provided.
+    multiple: true
+    options:
+    - Windows
+    - Linux
+    - Mac
+    - iOS
+    - Android
+    - Other
+  validations:
+    required: false
 - type: textarea
-  id: CustomerSegments
+  id: solution_proposed
   attributes:
-    label: "Customer Segments"
-    description: |
-      1. Who are the primary users of your product/service?
-      2. What are the key characteristics of your target customer segments?
-      3. Who are your early adopters, and why will they use your product/service first?
-    placeholder: Who are your customers?
-  validations:
-    required: true
+    label: "Solution Proposed"
+    description: If you have any ideas or suggestions for how to fix the issue you encountered, please provide them in this section.
+    placeholder: Please describe any potential solutions or ideas you may have for fixing the issue.
+
 - type: textarea
-  id: CostStructure
+  id: additional_context
   attributes:
-    label: "Cost Structure"
-    description: |
-      1. What are the biggest expenses associated with your business model?
-      2. Which resources and activities are the most expensive?
-      3. How can you cut costs and make more profit?
-    placeholder: What are our costs? Let's not break the bank!!
-  validations:
-    required: true
+    label: "Additional Context"
+    description: If you have any additional context or information that may help us understand the problem better, please provide it here.
+    placeholder: This can include any relevant logs, error messages, or other information that may be useful in diagnosing the issue.
 - type: textarea
-  id: RevenueStreams
+  id: actual_reported
   attributes:
-    label: "Revenue Streams"
-    description: |
-      1. What value are customers willing to pay for?
-      2. How are customers currently paying for similar offerings, and what are they willing to spend?
-      3. What pricing strategies will you implement?
-      4. How much revenue do you expect from each customer segment and revenue stream?
-    placeholder: How will you make money?
+    label: "Actual Reporter"
+    description: Please specify the name or email of the actual reporter of the issue if it's not observed by QA
+    placeholder: Please specify the name or email of the actual reporter of the issue if it's not observed by QA
+    render: bash
   validations:
-    required: true
-- type: textarea
-  id: BrainstromingSpace
+    required: false
+- type: checkboxes
+  id: is_customer_reported
   attributes:
-    label: "Brainstorming Space"
-    description: Idea playground
-    placeholder: Unleash your wacky ideas, half-baked concepts, and genius insights.
-  validations:
-    required: true
+    label: "Is this issue reported by a Customer?"
+    options:
+    - label: "Yes"
+      required: true
 - type: markdown
   attributes:
-    value: Remember, every great idea starts with a little madness. Don't hold back!!😄
+    value: Thank you for taking the time to report the issue! 😄  We appreciate your help! 😄
