@@ -67,7 +67,7 @@ body:
   attributes:
     label: "Channels"
     description: |
-      1. What channels do your customer segments prefer to be reached?
+      1. Which channels do your customer segments prefer to be reached?
       2. How are you currently reaching your customers?
       3. Which channels are most effective and cost-efficient for customer acquisition and retention?
     placeholder: How will we reach your customer?
